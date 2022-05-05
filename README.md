@@ -5,8 +5,8 @@
 
 ![hardward image](./readme.images/lidar_camera_gallery_1.jpg)
 
-| Features |  |  |  |
-| ------- | --- | --- | --- |
+| Features |  |  |  
+| ------- | --- | --- |
 |  *Use Environment* | *Technology* | *Ideal range* |
 | Indoor | Laser Scanning | .25m to 9m (Range affected by reflectivity) |
 
@@ -15,13 +15,13 @@
 |  *Depth technology* | *Depth Field of View (FOV)* | *Minimum depth distance (Min-Z) at max resolution* | *Depth output resolution* | *Depth Accuracy* | *Depth frame rate* |
 | LiDAR | 70° × 55° (±3°) | ~25cm | Up to 1024*768 | ~5 mm to ~14 mm thru 9m**2 | 30fps |
 
-| RGB |  |  |  | | |
-| ------- | --- | --- | --- | --- | --- |
+| RGB | | | | | 
+| ------- | --- | --- | --- | --- |
 | *RGB frame resolution* | *RGB sensor FOV(H\*V)* | *RGB frame rate* | *RGB sensor resolution* | *RGB sensor technology* |
 | 1920 * 1080 | 70° × 43° (±3°) | 30 fps | 2 MP | Rolling Shutter |
 
-| Major Components | | |
-| --- | --- | --- |
+| Major Components | | 
+| --- | --- |
 | *Processing* | *Optical Board* |
 | Intel RealSense Vision ASIC | Laser & MEMS Mirror |
 

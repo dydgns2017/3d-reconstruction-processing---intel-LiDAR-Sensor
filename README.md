@@ -30,7 +30,7 @@
 | *Form Factor* | *Connectors* | *Diameter \* Height* | *Mounting mechanism* |
 | Camera Peripheral | USB-C\*3.1 Gen 1\* | 61mm * 26 mm | One 1/4‑20 UNC thread mounting point. & Two M3 thread mounting points. & Tripod
 
-
+** reference : https://www.intelrealsense.com/lidar-camera-l515/
 
 # Process work
 
@@ -49,6 +49,8 @@
 
 - Python 3.8, open3d 0.15.1 with conda environment 
 ```
+conda create -n ro3d python=3.8
+conda activate ro3d
 
 ```
 

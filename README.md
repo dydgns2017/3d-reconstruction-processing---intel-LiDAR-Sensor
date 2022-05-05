@@ -34,6 +34,8 @@
 
 # Process work
 
+![full-progress](./readme.images/full-progress.png)
+
 ```
 1. Hardware Settings
 - Intrinsic Parameter
@@ -64,4 +66,5 @@ conda activate ro3d
 ```
 - https://www.intelrealsense.com/lidar-camera-l515/
 - http://www.open3d.org/docs/release/tutorial/sensor/realsense.html
+- https://darkpgmr.tistory.com/32 (Camera Calibration)
 ```

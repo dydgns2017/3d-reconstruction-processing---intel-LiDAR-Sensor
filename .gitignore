@@ -130,3 +130,6 @@ dmypy.json
 
 # datasets ignore
 /datasets
+
+# open3d folder ignore
+/Open3D

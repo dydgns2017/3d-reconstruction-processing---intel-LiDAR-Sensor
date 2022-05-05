@@ -57,6 +57,7 @@ pip install open3d
 pip install joblib
 pip install pyrealsense2
 pip install opencv-python
+pip install matplotlib
 ```
 
 ## Open3d reconstruction example
@@ -97,18 +98,68 @@ python visualizer.py --filename datasets/016/scene/integrated.ply
 
 ## Create Own Dataset
 
-- recording use sample python file
+- you should be ready dataset like below
+- but, already setup in realsense_recorder.py file so you just use recorder script
 ```
-
+datasets
+└── realsense
+    ├── camera_intrinsic.json
+    ├── color
+    │   ├── 000000.jpg
+    │   ├── :
+    └── depth
+        ├── 000000.png
+        ├── :
+```
+- recording dataset
+```bash
+cd $open3d_root && cd ..
+python realsense_recorder.py --record_imgs
 ```
 
 ## 3D recon result from own dataset
+- reconstruction from own dataset
+```bash
+# this is script setup config file for use recon system
+# just copy or moify & paste terminal bash
+cat << EOF > config.json
+{
+    "name": "Realsense image file",
+    "path_dataset": "datasets/realsense",
+    "path_intrinsic": "datasets/realsense/camera_intrinsic.json",
+    "max_depth": 3.0,
+    "voxel_size": 0.05,
+    "max_depth_diff": 0.07,
+    "preference_loop_closure_odometry": 0.1,
+    "preference_loop_closure_registration": 5.0,
+    "tsdf_cubic_size": 3.0,
+    "icp_method": "color",
+    "global_registration": "ransac",
+    "python_multi_threading": true
+}
+EOF
+```
+- reconstruction by open3d script
+```bash
+cd open3d/ && open3d_root=$(pwd)
+run_system=$open3d_root"/examples/python/reconstruction_system/run_system.py"
+cd .. # go to github clone dir (HOME)
+```
+```
+python $run_system config.json 
+python $run_system config.json --make --register --refine --integrate
+```
 
-
+- result image
+```
+python visualizer.py --filename datasets/realsense/scene/integrated.ply
+```
+![result](./readme.images/result_owndata.png)
 
 # Reference
 - Paper
 ```
+- not yet update
 ```
 - Blog Posting & Etc.
 ```

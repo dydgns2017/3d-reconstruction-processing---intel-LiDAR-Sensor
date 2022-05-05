@@ -3,7 +3,7 @@
 
 # Hardware Information (datasheet)
 
-![hardward image](./readme.images/lidar_camera_gallery_1.jpg)
+![hardward image](./readme.images/lidar_camera_gallery_6.jpg)
 
 | Features |  |  |  
 | ------- | --- | --- |
@@ -61,4 +61,5 @@
 - Blog Posting & Etc.
 ```
 - https://www.intelrealsense.com/lidar-camera-l515/
+- http://www.open3d.org/docs/release/tutorial/sensor/realsense.html
 ```
